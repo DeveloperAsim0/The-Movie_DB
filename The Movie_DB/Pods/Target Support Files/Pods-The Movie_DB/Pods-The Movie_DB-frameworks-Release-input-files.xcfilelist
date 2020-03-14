@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-The Movie_DB/Pods-The Movie_DB-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework

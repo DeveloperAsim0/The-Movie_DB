@@ -8,4 +8,5 @@ target 'The Movie_DB' do
   # Pods for The Movie_DB
     pod 'Alamofire'
     pod 'SDWebImage'  
+    pod 'SwiftyJSON'
 end
