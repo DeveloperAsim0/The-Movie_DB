@@ -18,8 +18,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var poster_path_URL = "https://image.tmdb.org/t/p/w185/"
     
-    var posterImages = [String]()
-    var poster_ID = [String]()
+    var posterImages   = [String]()
+    var poster_ID      = [String]()
+    var backdrop_Path  = [String]()
+    var image_Title    = [String]()
+    var movie_Overview = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +33,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    
     func get_Api_Data() {
         request(self.API_URL).responseJSON { (myResponse) in
             switch myResponse.result {
@@ -40,12 +42,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 print(myresult!["results"])
                 let resultArray = myresult!["results"]
                 self.posterImages.removeAll()
+                self.backdrop_Path.removeAll()
                 for i in resultArray.arrayValue {
                     let posterID = i["id"].stringValue
                     self.poster_ID.append(posterID)
                     let posterImage = self.poster_path_URL + i["poster_path"].stringValue
                     self.posterImages.append(posterImage)
                     print("poster images:- \(self.posterImages)")
+                    let backdropPath = self.poster_path_URL + i["backdrop_path"].stringValue
+                    self.backdrop_Path.append(backdropPath)
+                    print("backdropPath:- \(self.backdrop_Path)")
+                    let imageTitle = i["title"].stringValue
+                    self.image_Title.append(imageTitle)
+                    let movieoverview = i["overview"].stringValue
+                    self.movie_Overview.append(movieoverview)
                 }
                 self.collection.reloadData()
                 break
@@ -64,6 +74,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return CGSize(width: (view.frame.width / 2) - 13, height: 300)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+       let controller = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
+        
+        controller?.backgroundImage = backdrop_Path[indexPath.row] 
+        controller?.posterImage_Path = posterImages[indexPath.row]
+        controller?.titleLabel = image_Title[indexPath.row]
+        controller?.movieOverView = movie_Overview[indexPath.row]
+        self.navigationController?.pushViewController(controller!, animated: true)
+        
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return poster_ID.count

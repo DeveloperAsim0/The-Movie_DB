@@ -14,10 +14,10 @@ class CollectionViewCell: UICollectionViewCell {
     
     
     override func layoutSubviews() {
-        self.layer.cornerRadius = 15.0
-            self.layer.borderWidth = 5.0
-            self.layer.borderColor = UIColor.clear.cgColor
-            self.layer.masksToBounds = true
+//        self.layer.cornerRadius = 15.0
+//            self.layer.borderWidth = 5.0
+//            self.layer.borderColor = UIColor.clear.cgColor
+//            self.layer.masksToBounds = true
             
             // cell shadow section
             self.contentView.layer.cornerRadius = 15.0
