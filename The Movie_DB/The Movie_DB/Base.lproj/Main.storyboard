@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N7P-Ah-40e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2672.8000000000002" y="420.53973013493254"/>
+            <point key="canvasLocation" x="431" y="420"/>
         </scene>
         <!--TV Shows-->
         <scene sceneID="MLF-cF-sxk">
@@ -148,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="405-Zw-xuN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3612" y="-244.22788605697153"/>
+            <point key="canvasLocation" x="1839" y="-143"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="43k-oB-yf8">
@@ -168,7 +168,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJZ-8C-Dip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-849" y="78"/>
+            <point key="canvasLocation" x="-1046" y="-141"/>
         </scene>
         <!--Movies-->
         <scene sceneID="tne-QT-ifu">
@@ -236,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="-564.46776611694156"/>
+            <point key="canvasLocation" x="430" y="-758"/>
         </scene>
         <!--Item-->
         <scene sceneID="PHu-Kl-m7d">
@@ -258,7 +258,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5CT-z4-qkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="-685"/>
+            <point key="canvasLocation" x="-274" y="-757"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="jq3-hE-F2e">
@@ -312,12 +312,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNA-RD-cks">
-                                <rect key="frame" x="16" y="410" width="359" height="257"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfe-3D-fzF">
                                 <rect key="frame" x="158" y="126" width="59" height="62"/>
                                 <constraints>
@@ -330,31 +324,39 @@
                                 </connections>
                             </button>
                             <webView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qP7-lx-h8E">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="184"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tTC-4u-MrG">
+                                <rect key="frame" x="10" y="399" width="365" height="268"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Tfe-3D-fzF" firstAttribute="centerY" secondItem="JCc-6J-vC2" secondAttribute="centerY" constant="-176.5" id="1e6-aM-PyD"/>
+                            <constraint firstItem="e80-ql-oku" firstAttribute="top" secondItem="qP7-lx-h8E" secondAttribute="bottom" constant="8" symbolic="YES" id="4Y0-Fq-i6b"/>
                             <constraint firstItem="U8Z-a2-77N" firstAttribute="trailing" secondItem="liX-mk-g3l" secondAttribute="trailing" id="8uu-Un-IfY"/>
                             <constraint firstItem="UjL-t5-w4H" firstAttribute="top" secondItem="liX-mk-g3l" secondAttribute="bottom" constant="8" id="9Tz-nF-sEn"/>
-                            <constraint firstItem="SNA-RD-cks" firstAttribute="trailing" secondItem="U8Z-a2-77N" secondAttribute="trailing" id="9lb-AH-2Cz"/>
-                            <constraint firstItem="U8Z-a2-77N" firstAttribute="bottom" secondItem="SNA-RD-cks" secondAttribute="bottom" id="Ajt-Bo-A1R"/>
                             <constraint firstItem="Bez-Yg-1fA" firstAttribute="leading" secondItem="U8Z-a2-77N" secondAttribute="leading" id="Ann-6j-8NW"/>
                             <constraint firstItem="U8Z-a2-77N" firstAttribute="trailing" secondItem="UjL-t5-w4H" secondAttribute="trailing" id="ApV-PU-CwE"/>
+                            <constraint firstItem="tTC-4u-MrG" firstAttribute="leading" secondItem="U8Z-a2-77N" secondAttribute="leading" constant="10" id="AsR-t9-KhG"/>
                             <constraint firstItem="e80-ql-oku" firstAttribute="top" secondItem="U8Z-a2-77N" secondAttribute="top" constant="192" id="FJu-Sa-Ond"/>
                             <constraint firstItem="Bez-Yg-1fA" firstAttribute="top" secondItem="U8Z-a2-77N" secondAttribute="top" id="HJJ-dB-c2J"/>
                             <constraint firstItem="liX-mk-g3l" firstAttribute="leading" secondItem="U8Z-a2-77N" secondAttribute="leading" constant="16" id="IWi-kH-fDJ"/>
+                            <constraint firstItem="tTC-4u-MrG" firstAttribute="top" secondItem="UjL-t5-w4H" secondAttribute="bottom" constant="8" id="Im0-0a-pL8"/>
                             <constraint firstItem="e80-ql-oku" firstAttribute="leading" secondItem="U8Z-a2-77N" secondAttribute="leading" constant="16" id="J1H-Pt-Uq8"/>
                             <constraint firstItem="qP7-lx-h8E" firstAttribute="top" secondItem="U8Z-a2-77N" secondAttribute="top" id="OV8-oT-TmD"/>
                             <constraint firstItem="liX-mk-g3l" firstAttribute="top" secondItem="e80-ql-oku" secondAttribute="bottom" constant="17" id="OlD-0T-ZKV"/>
                             <constraint firstItem="qP7-lx-h8E" firstAttribute="leading" secondItem="U8Z-a2-77N" secondAttribute="leading" id="TCn-ZQ-OxH"/>
-                            <constraint firstItem="SNA-RD-cks" firstAttribute="top" secondItem="UjL-t5-w4H" secondAttribute="bottom" constant="19" id="TPv-5c-top"/>
                             <constraint firstAttribute="trailing" secondItem="qP7-lx-h8E" secondAttribute="trailing" id="XK0-2K-IHA"/>
                             <constraint firstItem="UjL-t5-w4H" firstAttribute="leading" secondItem="U8Z-a2-77N" secondAttribute="leading" constant="16" id="XyA-m0-33N"/>
-                            <constraint firstAttribute="bottom" secondItem="qP7-lx-h8E" secondAttribute="bottom" id="aVx-I6-mt8"/>
-                            <constraint firstItem="SNA-RD-cks" firstAttribute="leading" secondItem="U8Z-a2-77N" secondAttribute="leading" constant="16" id="hPs-NC-wHX"/>
+                            <constraint firstItem="tTC-4u-MrG" firstAttribute="bottom" secondItem="U8Z-a2-77N" secondAttribute="bottom" id="dx3-ef-0cu"/>
+                            <constraint firstItem="tTC-4u-MrG" firstAttribute="trailing" secondItem="U8Z-a2-77N" secondAttribute="trailing" id="qaS-3d-DoU"/>
                             <constraint firstItem="Tfe-3D-fzF" firstAttribute="centerX" secondItem="JCc-6J-vC2" secondAttribute="centerX" id="xIn-wZ-S17"/>
                             <constraint firstItem="U8Z-a2-77N" firstAttribute="trailing" secondItem="Bez-Yg-1fA" secondAttribute="trailing" id="xfs-Gr-Cg9"/>
                         </constraints>
@@ -364,7 +366,7 @@
                     <connections>
                         <outlet property="PosterImagePost" destination="Bez-Yg-1fA" id="3Vs-6Q-PLW"/>
                         <outlet property="movieName" destination="liX-mk-g3l" id="aOd-gN-e62"/>
-                        <outlet property="overView" destination="SNA-RD-cks" id="rlm-aQ-KuL"/>
+                        <outlet property="overView" destination="tTC-4u-MrG" id="2zR-wC-8Hz"/>
                         <outlet property="smallposterImage" destination="e80-ql-oku" id="ARh-lO-qvE"/>
                         <outlet property="videoView" destination="qP7-lx-h8E" id="r02-UI-Xnt"/>
                     </connections>
@@ -411,7 +413,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPB-4w-dqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2672.8000000000002" y="-244.22788605697153"/>
+            <point key="canvasLocation" x="1137" y="-142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qzc-5M-WKa">
@@ -433,7 +435,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBo-u1-2Tv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1733.5999999999999" y="420.53973013493254"/>
+            <point key="canvasLocation" x="-273" y="420"/>
         </scene>
     </scenes>
     <resources>

@@ -16,8 +16,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var PosterImagePost: UIImageView!
     @IBOutlet weak var smallposterImage: UIImageView!
     @IBOutlet weak var movieName: UILabel!
-    @IBOutlet weak var overView: UILabel!
     @IBOutlet weak var videoView: UIWebView!
+    @IBOutlet weak var overView: UITextView!
     
     
     var backgroundImage  = String()
