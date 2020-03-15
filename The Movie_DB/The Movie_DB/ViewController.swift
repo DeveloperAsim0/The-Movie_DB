@@ -29,7 +29,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.dataSource = self
         collection.delegate = self
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        
         get_Api_Data()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -46,6 +48,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 for i in resultArray.arrayValue {
                     let posterID = i["id"].stringValue
                     self.poster_ID.append(posterID)
+                    print("idpos:- \(self.poster_ID)")
                     let posterImage = self.poster_path_URL + i["poster_path"].stringValue
                     self.posterImages.append(posterImage)
                     print("poster images:- \(self.posterImages)")
@@ -83,6 +86,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         controller?.posterImage_Path = posterImages[indexPath.row]
         controller?.titleLabel = image_Title[indexPath.row]
         controller?.movieOverView = movie_Overview[indexPath.row]
+        controller?.movieID = poster_ID[indexPath.row]
+        controller?.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(controller!, animated: true)
         
     }

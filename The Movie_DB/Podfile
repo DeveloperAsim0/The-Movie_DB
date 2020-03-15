@@ -9,4 +9,5 @@ target 'The Movie_DB' do
     pod 'Alamofire'
     pod 'SDWebImage'  
     pod 'SwiftyJSON'
+    pod 'CircleBar'
 end

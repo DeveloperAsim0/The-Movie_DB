@@ -258,7 +258,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5CT-z4-qkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-695.20000000000005" y="-364.7676161919041"/>
+            <point key="canvasLocation" x="127" y="-685"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="jq3-hE-F2e">
@@ -299,7 +299,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="tay-wY-qhO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -318,9 +318,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfe-3D-fzF">
+                                <rect key="frame" x="158" y="126" width="59" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="XtD-F8-MS7"/>
+                                    <constraint firstAttribute="height" constant="62" id="YCc-5M-ezW"/>
+                                </constraints>
+                                <state key="normal" image="icons8-circled-play-96"/>
+                                <connections>
+                                    <action selector="videoplay:" destination="ooH-Hp-1sK" eventType="touchUpInside" id="GRT-8z-m4J"/>
+                                </connections>
+                            </button>
+                            <webView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qP7-lx-h8E">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Tfe-3D-fzF" firstAttribute="centerY" secondItem="JCc-6J-vC2" secondAttribute="centerY" constant="-176.5" id="1e6-aM-PyD"/>
                             <constraint firstItem="U8Z-a2-77N" firstAttribute="trailing" secondItem="liX-mk-g3l" secondAttribute="trailing" id="8uu-Un-IfY"/>
                             <constraint firstItem="UjL-t5-w4H" firstAttribute="top" secondItem="liX-mk-g3l" secondAttribute="bottom" constant="8" id="9Tz-nF-sEn"/>
                             <constraint firstItem="SNA-RD-cks" firstAttribute="trailing" secondItem="U8Z-a2-77N" secondAttribute="trailing" id="9lb-AH-2Cz"/>
@@ -331,10 +347,15 @@
                             <constraint firstItem="Bez-Yg-1fA" firstAttribute="top" secondItem="U8Z-a2-77N" secondAttribute="top" id="HJJ-dB-c2J"/>
                             <constraint firstItem="liX-mk-g3l" firstAttribute="leading" secondItem="U8Z-a2-77N" secondAttribute="leading" constant="16" id="IWi-kH-fDJ"/>
                             <constraint firstItem="e80-ql-oku" firstAttribute="leading" secondItem="U8Z-a2-77N" secondAttribute="leading" constant="16" id="J1H-Pt-Uq8"/>
+                            <constraint firstItem="qP7-lx-h8E" firstAttribute="top" secondItem="U8Z-a2-77N" secondAttribute="top" id="OV8-oT-TmD"/>
                             <constraint firstItem="liX-mk-g3l" firstAttribute="top" secondItem="e80-ql-oku" secondAttribute="bottom" constant="17" id="OlD-0T-ZKV"/>
+                            <constraint firstItem="qP7-lx-h8E" firstAttribute="leading" secondItem="U8Z-a2-77N" secondAttribute="leading" id="TCn-ZQ-OxH"/>
                             <constraint firstItem="SNA-RD-cks" firstAttribute="top" secondItem="UjL-t5-w4H" secondAttribute="bottom" constant="19" id="TPv-5c-top"/>
+                            <constraint firstAttribute="trailing" secondItem="qP7-lx-h8E" secondAttribute="trailing" id="XK0-2K-IHA"/>
                             <constraint firstItem="UjL-t5-w4H" firstAttribute="leading" secondItem="U8Z-a2-77N" secondAttribute="leading" constant="16" id="XyA-m0-33N"/>
+                            <constraint firstAttribute="bottom" secondItem="qP7-lx-h8E" secondAttribute="bottom" id="aVx-I6-mt8"/>
                             <constraint firstItem="SNA-RD-cks" firstAttribute="leading" secondItem="U8Z-a2-77N" secondAttribute="leading" constant="16" id="hPs-NC-wHX"/>
+                            <constraint firstItem="Tfe-3D-fzF" firstAttribute="centerX" secondItem="JCc-6J-vC2" secondAttribute="centerX" id="xIn-wZ-S17"/>
                             <constraint firstItem="U8Z-a2-77N" firstAttribute="trailing" secondItem="Bez-Yg-1fA" secondAttribute="trailing" id="xfs-Gr-Cg9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U8Z-a2-77N"/>
@@ -345,6 +366,7 @@
                         <outlet property="movieName" destination="liX-mk-g3l" id="aOd-gN-e62"/>
                         <outlet property="overView" destination="SNA-RD-cks" id="rlm-aQ-KuL"/>
                         <outlet property="smallposterImage" destination="e80-ql-oku" id="ARh-lO-qvE"/>
+                        <outlet property="videoView" destination="qP7-lx-h8E" id="r02-UI-Xnt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oST-fg-Uu1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -418,6 +440,7 @@
         <image name="city-of-gold-coast-o5TTYcAlbHc-unsplash" width="3000" height="2000"/>
         <image name="cloud.bolt.rain" catalog="system" width="64" height="64"/>
         <image name="flame" catalog="system" width="54" height="64"/>
+        <image name="icons8-circled-play-96" width="96" height="96"/>
         <image name="moon.zzz" catalog="system" width="58" height="64"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

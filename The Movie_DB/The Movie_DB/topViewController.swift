@@ -84,6 +84,7 @@ class topViewController: UIViewController, UICollectionViewDelegate, UICollectio
             controller?.posterImage_Path = posterImages[indexPath.row]
             controller?.titleLabel = image_Title[indexPath.row]
             controller?.movieOverView = movie_Overview[indexPath.row]
+            controller?.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(controller!, animated: true)
             
         }
